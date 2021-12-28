@@ -1,8 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion"
-import PropTypes from "prop-types"
+import { useContext } from "react"
 import FeedbackItem from "./FeedbackItem"
+import FeedbackContext from "../context/FeedbackContext"
 
-const FeedbackList = ({ feedback, handleDelete }) => {
+const FeedbackList = ({ handleDelete }) => {
+  const { feedback } = useContext(FeedbackContext)
+
   if (!feedback || feedback.length === 0) {
     return <p>No feedback yet!</p>
   }
@@ -17,16 +20,6 @@ const FeedbackList = ({ feedback, handleDelete }) => {
         ))}
       </AnimatePresence>
     </div>
-  )
-}
-
-FeedbackList.propTypes = {
-  feedback: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-      rating: PropTypes.number.isRequired
-    })
   )
 }
 

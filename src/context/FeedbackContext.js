@@ -8,6 +8,11 @@ export const FeedbackProvider = ({ children }) => {
             id: 1,
             text: "This item is from context",
             rating: 10
+        },
+        {
+            id: 2,
+            text: "This item is from context too",
+            rating: 8
         }
     ])
 
