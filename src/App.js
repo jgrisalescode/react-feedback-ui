@@ -6,6 +6,7 @@ import FeedbackData from "./data/FeedbackData"
 import FeedbackList from "./components/FeedbackList"
 import FeedbackStats from "./components/FeedbackStats"
 import FeedbackForm from "./components/FeedbackForm"
+import AboutIconLink from "./components/shared/AboutIconLink"
 import About from "./pages/About"
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
           </Route>
           <Route path="/about" element={<About />} />
         </Routes>
+        <AboutIconLink />
       </div>
     </Router >
   )
